@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class InternTask2 {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("STUDENT GRADE CALCULATOR");
+        System.out.println("Enter Number Of Subject");
+   int NumberOfSubject = sc.nextInt();
+       int total=0;
+       for(int i=1;i<=NumberOfSubject;i++){
+           System.out.println("Enter marks obtained in"+ i +": ");
+           int marks= sc.nextInt();
+           total+=marks;
+       }
+        double AveragePercentage=(double)total/NumberOfSubject ;
+      char Grade;
+        if(AveragePercentage>80){
+           Grade='A';
+        } else if (AveragePercentage>70) {
+            Grade ='B';
+        }
+        else if (AveragePercentage>60){
+             Grade='C';
+        }
+        else if (AveragePercentage>50){
+           Grade='D';
+        }
+        else if (AveragePercentage>40){
+            Grade='E';
+        }
+        else {
+            Grade='F';
+        }
+        System.out.println("Total Marks Scored Is: "+total);
+        System.out.println("Average Percent Gained Is: "+AveragePercentage);
+        System.out.println("Grade: "+Grade);
+    }
+}
